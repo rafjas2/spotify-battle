@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <title>Spotify Artist Battle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <link rel="stylesheet" href="/css/styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+      </head>
+      <body>
+        <main class="container">
+         <section id="logo">
+            <i class="fab fa-spotify"></i>
+            <h1> Spotify Battle Arena</h1>
+          </section>
+          <section class="battle-stage" id="battle-stage">
+            <div class="spartan" id="artist1-container">
+              <img src="" alt="spartan helmet facing right" class="spartan-img" id="artist1-img">
+              <h2 id="artist1-name"></h2>
+              <input type="text" id="artist1-input" placeholder="First Artist" required>
+              <button type="button" id="add-artist1">Add Artist</button>
+              
+            </div>
+            <h2 class="vs">VS</h2>
+            <div class="spartan" id="artist2-container">
+              <img src="" alt="spartan helmet facing left" class="spartan-img" id="artist2-img">
+              <h2 id="artist2-name"></h2>
+              <input type="text" id="artist2-input" placeholder="Second Artist" required>
+              <button type="button" id="add-artist2">Add Artist</button>
+              
+          </section>
+          <!--Battle Button-->
+          <button  id="battleBtn">Battle!</button>
+          <section id="winner-screen" >
+            <h2 id="winner-title">Winner <span role="img" aria-label="trophy">🏆</span></h2>
+            <img id="winner-img" src="" alt="Winner Artist Image">
+            <h2 id="winner-name"></h2>
+            <p id="winner-followers"></p>
+            <button id="backBtn">Back to Battle</button>
+          </section>
+          <section id="results"></section>
+        </main>
+       <script src="/js/script.js"></script>
+</body>
+</html>
