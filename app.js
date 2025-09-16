@@ -30,7 +30,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || 'fallback-secret',
   resave: false,
   saveUninitialized: false,
   cookie: { 
