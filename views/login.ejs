@@ -1,8 +1,9 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-      <meta charset="UTF-8">
-    <title>Spotify Artist Battle Template</title>
+    <title>Spotify Artist Battle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Hammersmith+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
@@ -10,17 +11,18 @@
   </head>
 
   <body>
-    <main class="container">
-      <section id="logo">
-        <i class="fab fa-spotify icon"></i>
+    <main class="container box">
+      <section class="logo">
+        <i class="fab fa-spotify" aria-hidden="true"></i>
         <h1>Spotify Artist Battle</h1>
       </section>
-      <section id="login">
-        <a href="/auth/login">
-        <button id="login-button" class="btn">Log in with Spotify</button>
-        </a>
+      <section>
+        <form action="/auth/login" method="get">
+        <button id="login-button" class="btn btn-large">
+        Log in with Spotify
+        </button>
+        </form>
       </section>
     </main>
-    <script src="/js/script.js"></script>
     </body>
 </html>

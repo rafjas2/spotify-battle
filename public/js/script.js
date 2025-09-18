@@ -143,7 +143,8 @@ if (battleBtn) {
     // Show the winner
     battleStage.style.display = "none";
     battleBtn.style.display = "none";
-    winnerScreen.style.display = "block";
+    winnerScreen.classList.add('show');
+    winnerScreen.style.display = "flex";
     winnerImg.src = data.winner.images?.[0]?.url || spartan1;
     winnerName.textContent = data.winner.name;
     winnerFollowers.textContent = `Followers: ${data.winner.followers.total.toLocaleString()} `;
