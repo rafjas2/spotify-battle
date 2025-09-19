@@ -62,7 +62,9 @@ async function addArtist1() {
         const data = await fetchArtistByName(query);
         if (data?.artist) {
           artist1Img.src = data.artist.images?.[0]?.url || spartan1;
+          artist1Img.style.border = '0.5rem solid #1DB954';
           artist1Name.textContent = data.artist.name;  
+          artist1Name.style.display = 'block';
           artist1Input.style.display = 'none'; 
         } else {
             alert(data?.error || 'Artist not found');
@@ -84,8 +86,10 @@ async function addArtist2() {
         const data = await fetchArtistByName(query);
         if (data?.artist) {
           artist2Img.src = data.artist.images?.[0]?.url || spartan1;
+          artist2Img.style.border = '0.5rem solid #1DB954';
           artist2Name.textContent = data.artist.name; 
-          artist2Input.style.display = 'none';  
+          artist2Name.style.display = 'block';
+          artist2Input.style.display = 'none';
         } else {
             alert(data?.error || 'Artist not found');
         }
@@ -143,7 +147,7 @@ if (battleBtn) {
     // Show the winner
     battleStage.style.display = "none";
     battleBtn.style.display = "none";
-    winnerScreen.classList.add('show');
+    winnerImg.classList.add('show');
     winnerScreen.style.display = "flex";
     winnerImg.src = data.winner.images?.[0]?.url || spartan1;
     winnerName.textContent = data.winner.name;
@@ -164,9 +168,13 @@ if (backBtn) {
 
     // Reset placeholders
     artist1Img.src = spartan1;
+    artist1Img.style.border = "none";
     artist2Img.src = spartan2;
+    artist2Img.style.border = "none";
     artist1Name.textContent = "";
     artist2Name.textContent = "";
+    artist1Name.style.display = "none";
+    artist2Name.style.display = "none";
     artist1Input.style.display = "block";
     artist2Input.style.display = "block"; 
     artist1Input.value = "";

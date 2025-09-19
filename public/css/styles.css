@@ -36,7 +36,7 @@ html {
     font-size: 8rem;
     color:#1DB954;
     text-align: center;
-    padding: 3rem;
+    padding-top: 3rem;
 }
 .logo h1 {
     font-family: 'Hammersmith One', sans-serif;
@@ -94,6 +94,7 @@ html {
     padding: 0.5rem;
     text-align: center;
     margin-bottom: 2rem;
+    display: none;
 }
 .artist-input {
     margin-bottom: 1rem;
@@ -124,24 +125,24 @@ html {
 .winner-title {
     font-size: 4rem;
     color: #1DB954;
-    margin-bottom: 1rem;
 }
 .winner-img {
     width: 20rem;
     height: 20rem;
+    border: 0.5rem solid #1DB954;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin: 2rem;
 }
 .winner-name {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin: 2rem;
 }
 .winner-followers {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 0 0 2rem 0;
 }
 
-.winner-screen.show {
+.winner-img.show {
     animation: fedeIn 0.6s ease-in-out;
 }
 
@@ -170,7 +171,7 @@ html {
         padding: 2rem 0 0;
     }
     .logo h1 {
-        padding: 1rem;
+        padding: 0;
         font-size: 3rem;
     }
 
@@ -197,6 +198,7 @@ html {
     }
    
     .artist-name {
+        display: none;
         font-size: 2.5rem;
         padding: 1rem;
     }
