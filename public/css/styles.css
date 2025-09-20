@@ -6,6 +6,7 @@
 
 html {
     font-size: 62.5%; /* 1rem = 10px */
+    overflow: hidden;
 }
 
 
@@ -19,7 +20,7 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100vh
+    min-height: 100dvh
 }
 .container  {
     display: flex;
@@ -159,6 +160,10 @@ html {
 
 
 @media screen and (max-width: 825px) {
+    /* body {
+        min-height: 100dvh;
+        overflow: hidden;
+    } */
    
    .container {
         margin: 0;
