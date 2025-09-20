@@ -27,7 +27,6 @@ html {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 2rem;
     background-color: #0f0f0f;
     padding: 3rem;
     border-radius: 1rem;
@@ -76,7 +75,7 @@ html {
     align-items: center;
     flex-direction: row;
     gap: 3rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 .artist {
     display: flex;
@@ -117,6 +116,8 @@ html {
     color: #1DB954;
     margin: 2rem;
 }
+
+ /* winner screen */
 .winner-screen {
     display: none;
     flex-direction: column;
@@ -160,10 +161,7 @@ html {
 
 
 @media screen and (max-width: 825px) {
-    /* body {
-        min-height: 100dvh;
-        overflow: hidden;
-    } */
+   
    
    .container {
         margin: 0;
@@ -172,12 +170,12 @@ html {
     }
    
     .logo {
-        font-size: 6rem;
-        padding: 2rem 0 0;
+        font-size: 5rem;
+        padding: 1rem 0 0;
     }
     .logo h1 {
         padding: 0;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .btn-medium {
@@ -185,8 +183,9 @@ html {
         font-size: 1.5rem;
     }
     .btn-large {
-        padding: 1.5rem 3rem;
+        padding: 1rem 3rem;
         font-size: 1.5rem;
+        margin: 1rem 0 1rem 0  ;
     }
    
      
@@ -213,7 +212,7 @@ html {
    
     .battle-stage .vs {
         margin: 1rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .winner-title {
