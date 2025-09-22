@@ -93,7 +93,7 @@ html {
     font-size: 2rem;
     padding: 0.5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     display: none;
 }
 .artist-input {
@@ -168,6 +168,22 @@ html {
         padding: 0;
         width: 90%;
     }
+    .box {
+        height: 40vh;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .box .logo {
+        font-size: 6rem;
+        padding: 2rem 0;
+    }
+    .box .logo h1 {
+        padding: 2rem 0;
+        font-size: 3rem;
+    }
    
     .logo {
         font-size: 5rem;
@@ -202,9 +218,7 @@ html {
     }
    
     .artist-name {
-        display: none;
-        font-size: 2.5rem;
-        padding: 1rem;
+        font-size: 1.5rem;
     }
     .artist-input {
         font-size: 1.5rem;
