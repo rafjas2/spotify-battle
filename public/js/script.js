@@ -19,6 +19,19 @@ const artist2Input = document.getElementById('artist2-input');
 const addArtist1Btn = document.getElementById('add-artist1');
 const addArtist2Btn = document.getElementById('add-artist2');
 
+function showMessage(text, type = 'info') {
+  const messages = document.getElementById('messages');
+  const message = document.getElementById('message');
+  messages.style.display = 'flex';
+  message.classList.add(type);
+  message.textContent = text;
+  
+
+
+  setTimeout(() => {
+    messages.style.display = 'none';
+  }, 2000);
+}
 // Sanity check
 if (!artist1Img || !artist2Img || !artist1Input || !artist2Input || !addArtist1Btn || !addArtist2Btn) {
   console.error('script.js: Required DOM elements are missing. Check your battle.ejs IDs.');
@@ -55,7 +68,7 @@ async function fetchArtistByName(name) {
 // Add Artist 1 
 async function addArtist1() {
    const query = artist1Input.value.trim();
-    if (!query) return alert('Enter an artist name'); 
+    if (!query) return showMessage('Enter an artist name'); 
     addArtist1Btn.disabled = true;
 
     try {
@@ -79,7 +92,7 @@ async function addArtist1() {
 // Add Artist2
 async function addArtist2() {
    const query = artist2Input.value.trim();
-    if (!query) return alert('Enter an artist name'); 
+    if (!query) return showMessage('Enter an artist name'); 
     addArtist2Btn.disabled = true;
 
     try {
@@ -127,9 +140,10 @@ if (battleBtn) {
       const artistTwo = artist2Name.textContent;
 
       if (!artistOne || !artistTwo || artistOne === "" || artistTwo === "") {
-        alert('Please add both artists first!');
+        showMessage('Please add both artists first!');
         return;
     }
+
 
     try {
         const res = await fetch('/battle', {

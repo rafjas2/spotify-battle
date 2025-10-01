@@ -28,20 +28,21 @@ html {
     align-items: center;
     text-align: center;
     background-color: #0f0f0f;
-    padding: 3rem;
+    padding: 3rem 0;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(2, 0, 0, 0.5);
+    
 }
 .logo  {
-    font-size: 8rem;
+    font-size: 7rem;
     color:#1DB954;
     text-align: center;
-    padding-top: 3rem;
+
 }
 .logo h1 {
     font-family: 'Hammersmith One', sans-serif;
-    font-size: 4rem;
-    padding: 2rem;
+    font-size: 3.5rem;
+    padding: 1.5rem;
 }
 .btn {
     background-color: #1DB954;
@@ -66,7 +67,6 @@ html {
 .btn-large {
     padding: 1.5rem 3rem;
     font-size: 2rem;
-    margin-bottom: 3rem;
 }
 
 .battle-stage {
@@ -75,13 +75,14 @@ html {
     align-items: center;
     flex-direction: row;
     gap: 3rem;
-    /* flex-wrap: wrap; */
+
 }
 .artist {
+    width: 29.3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
+    padding: 2rem;
 }
 .artist-img {
     width: 20rem;
@@ -114,34 +115,73 @@ html {
 .battle-stage .vs {
     font-size: 6rem;
     color: #1DB954;
-    margin: 2rem;
 }
+/* messages screen */
+#messages {
+    width: 100%;
+    min-height: 100vh;
+    color: #ff4d4d;
+    background-color: #0f0f0fd8;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.messages-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40rem;
+    padding-top: 4rem;
+    border: solid 0.5rem #ff4d4d;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+.icon {
+    width: 10rem;
+    height: 10rem;
+    font-size: 6rem;
+    border: solid 0.5rem #ff4d4d;
+    border-radius: 50%;
+}
+#message {
+    font-size: 2rem;
+    padding: 5rem 0;
+    font-weight: 600;
+}
+
+
 
  /* winner screen */
 .winner-screen {
     display: none;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    padding: 1rem;
 }
 .winner-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: #1DB954;
 }
 .winner-img {
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     border: 0.5rem solid #1DB954;
     border-radius: 50%;
-    margin: 2rem;
+    margin: 1rem;
 }
 .winner-name {
     font-size: 3rem;
-    margin: 2rem;
+    padding: 1rem;
 }
 .winner-followers {
     font-size: 2rem;
-    margin: 0 0 2rem 0;
+    padding: 0 0 2rem;
 }
 
 .winner-img.show {
@@ -160,12 +200,11 @@ html {
 }
 
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 750px) {
    
    
    .container {
-        margin: 0;
-        padding: 0;
+    padding: 0.5rem;
         width: 90%;
     }
     .box {
@@ -178,16 +217,15 @@ html {
 
     .box .logo {
         font-size: 6rem;
-        padding: 2rem 0;
+        padding: 1.5rem 0;
     }
     .box .logo h1 {
-        padding: 2rem 0;
+        padding: 1.5rem 0;
         font-size: 3rem;
     }
    
     .logo {
         font-size: 5rem;
-        padding: 1rem 0 0;
     }
     .logo h1 {
         padding: 0;
@@ -210,7 +248,7 @@ html {
         gap: 0rem;
     }
     .artist {
-        margin: 0;
+        padding: 0.5rem 0;
     }
     .artist-img {
         width: 15rem;
@@ -225,17 +263,22 @@ html {
     }
    
     .battle-stage .vs {
-        margin: 1rem;
+
         font-size: 2.5rem;
+    }
+
+    .messages-info {
+        width: 30rem;
+
+    }
+    .winner-screen{
+        width:30rem;
     }
 
     .winner-title {
         font-size: 3rem;
     }
-    .winner-img {
-        width: 15rem;
-        height: 15rem;
-    }
- 
+   
+    
     
 }
