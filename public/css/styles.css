@@ -5,13 +5,13 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */
-    overflow: hidden;
+    font-size: 62.5%;
+    /* 1rem = 10px */
 }
 
 
 
- body {
+body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     background-color: #39107c;
@@ -20,9 +20,10 @@ html {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 100dvh
+    min-height: 100dvh;
 }
-.container  {
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,19 +32,22 @@ html {
     padding: 3rem 0;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(2, 0, 0, 0.5);
-    
+
 }
-.logo  {
+
+.logo {
     font-size: 7rem;
-    color:#1DB954;
+    color: #1DB954;
     text-align: center;
 
 }
+
 .logo h1 {
     font-family: 'Hammersmith One', sans-serif;
     font-size: 3.5rem;
     padding: 1.5rem;
 }
+
 .btn {
     background-color: #1DB954;
     color: #0f0f0f;
@@ -56,14 +60,17 @@ html {
     display: block;
     margin: 0 auto;
 }
+
 .btn:hover {
     background-color: #00ff59;
     color: #0f0f0f;
 }
+
 .btn-medium {
     padding: 0.5rem 1rem;
     font-size: 2rem;
 }
+
 .btn-large {
     padding: 1.5rem 3rem;
     font-size: 2rem;
@@ -77,6 +84,7 @@ html {
     gap: 3rem;
 
 }
+
 .artist {
     width: 29.3rem;
     display: flex;
@@ -84,12 +92,14 @@ html {
     align-items: center;
     padding: 2rem;
 }
+
 .artist-img {
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
     margin-bottom: 1rem;
 }
+
 .artist-name {
     font-size: 2rem;
     padding: 0.5rem;
@@ -97,6 +107,7 @@ html {
     margin-bottom: 1rem;
     display: none;
 }
+
 .artist-input {
     margin-bottom: 1rem;
     padding: 0.5rem;
@@ -107,6 +118,7 @@ html {
     font-size: 2rem;
     text-align: center;
 }
+
 .artist-input:focus {
     outline: 0.2rem solid #1DB954;
     background-color: #f0fff6;
@@ -116,6 +128,7 @@ html {
     font-size: 6rem;
     color: #1DB954;
 }
+
 /* messages screen */
 #messages {
     width: 100%;
@@ -131,6 +144,7 @@ html {
     left: 0;
     z-index: 1;
 }
+
 .messages-info {
     display: flex;
     flex-direction: column;
@@ -141,6 +155,7 @@ html {
     border-radius: 0.5rem;
     background-color: #fff;
 }
+
 .icon {
     width: 10rem;
     height: 10rem;
@@ -148,6 +163,7 @@ html {
     border: solid 0.5rem #ff4d4d;
     border-radius: 50%;
 }
+
 #message {
     font-size: 2rem;
     padding: 5rem 0;
@@ -156,7 +172,7 @@ html {
 
 
 
- /* winner screen */
+/* winner screen */
 .winner-screen {
     display: none;
     flex-direction: column;
@@ -164,10 +180,12 @@ html {
     align-items: center;
     padding: 1rem;
 }
+
 .winner-title {
     font-size: 3.5rem;
     color: #1DB954;
 }
+
 .winner-img {
     width: 15rem;
     height: 15rem;
@@ -175,10 +193,12 @@ html {
     border-radius: 50%;
     margin: 1rem;
 }
+
 .winner-name {
     font-size: 3rem;
     padding: 1rem;
 }
+
 .winner-followers {
     font-size: 2rem;
     padding: 0 0 2rem;
@@ -193,6 +213,7 @@ html {
         opacity: 0;
         transform: scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -201,12 +222,13 @@ html {
 
 
 @media screen and (max-width: 750px) {
-   
-   
-   .container {
-    padding: 0.5rem;
+
+
+    .container {
+        padding: 0.5rem;
         width: 90%;
     }
+
     .box {
         height: 40vh;
         width: 80%;
@@ -219,14 +241,16 @@ html {
         font-size: 6rem;
         padding: 1.5rem 0;
     }
+
     .box .logo h1 {
         padding: 1.5rem 0;
         font-size: 3rem;
     }
-   
+
     .logo {
         font-size: 5rem;
     }
+
     .logo h1 {
         padding: 0;
         font-size: 2.5rem;
@@ -236,32 +260,36 @@ html {
         padding: 0.5rem 1rem;
         font-size: 1.5rem;
     }
+
     .btn-large {
         padding: 1rem 3rem;
         font-size: 1.5rem;
-        margin: 1rem 0 1rem 0  ;
+        margin: 1rem 0 1rem 0;
     }
-   
-     
-   .battle-stage {
+
+
+    .battle-stage {
         flex-direction: column;
         gap: 0rem;
     }
+
     .artist {
         padding: 0.5rem 0;
     }
+
     .artist-img {
         width: 15rem;
         height: 15rem;
     }
-   
+
     .artist-name {
         font-size: 1.5rem;
     }
+
     .artist-input {
         font-size: 1.5rem;
     }
-   
+
     .battle-stage .vs {
 
         font-size: 2.5rem;
@@ -271,14 +299,15 @@ html {
         width: 30rem;
 
     }
-    .winner-screen{
-        width:30rem;
+
+    .winner-screen {
+        width: 30rem;
     }
 
     .winner-title {
         font-size: 3rem;
     }
-   
-    
-    
+
+
+
 }

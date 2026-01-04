@@ -14,7 +14,6 @@ const app = express();
 app.use(express.json());
 
 
-
 // Live reload
 const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(['public', 'views', 'routes']);
@@ -23,7 +22,7 @@ app.use(connectLivereload());
 liveReloadServer.server.once('connection', () => {
   setTimeout(() => {
     liveReloadServer.refresh('/');
-  }, 100);      
+  }, 100);
 });
 
 app.set('view engine', 'ejs');
@@ -33,11 +32,15 @@ app.use(session({
   secret: process.env.SESSION_SECRET || 'fallback-secret',
   resave: false,
   saveUninitialized: false,
-  cookie: { 
+  cookie: {
     secure: false, // Set to true if using HTTPS
     maxAge: 1000 * 60 * 60, // 1 hour
   }
 }));
+
+if (!process.env.SESSION_SECRET) {
+  console.warn('⚠️  WARNING: Session secret not set. Using unsafe fallback.');
+}
 
 //Routes
 app.get('/', (req, res) => res.render('login'));
@@ -47,6 +50,6 @@ app.use('/battle', battleRoutes);
 
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-  open(`http://localhost:${PORT}`);
+  console.log(`Server is running on http://127.0.0.1:${PORT}`);
+  open(`http://127.0.0.1:${PORT}`);
 });
